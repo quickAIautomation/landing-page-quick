@@ -34,3 +34,8 @@ Thumbs.db
 # Git lock
 .git/index.lock
 
+# Documentation
+docs/
+*.md
+!README.md
+
