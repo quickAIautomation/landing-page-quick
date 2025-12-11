@@ -1,6 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch, useLocation } from "wouter";
+import { Route, Switch, useLocation, Router as WouterRouter } from "wouter";
 import { useEffect } from "react";
 import { ErrorBoundary } from "@/components/common";
 import { ThemeProvider } from "@/contexts/ThemeContext";
@@ -44,6 +44,8 @@ function Router() {
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
+  const basePath = import.meta.env.BASE_URL;
+  
   return (
     <ErrorBoundary>
       <ThemeProvider
@@ -51,8 +53,10 @@ function App() {
         // switchable
       >
         <TooltipProvider>
-          <Toaster />
-          <Router />
+          <WouterRouter base={basePath}>
+            <Toaster />
+            <Router />
+          </WouterRouter>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
