@@ -89,7 +89,7 @@ export default function Home() {
                   </Button>
                 </a>
                 <a 
-                  href="https://wa.me/5521999999999" 
+                  href="https://wa.me/554497251731" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -418,7 +418,7 @@ export default function Home() {
                     </li>
                   </ul>
                   <a
-                    href="https://wa.me/5521999999999?text=Olá! Gostaria de contratar o plano Starter"
+                    href="https://wa.me/554497251731?text=Olá! Gostaria de contratar o plano Starter"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-auto"
@@ -491,7 +491,7 @@ export default function Home() {
                     </li>
                   </ul>
                   <a
-                    href="https://wa.me/5521999999999?text=Olá! Gostaria de contratar o plano Business"
+                    href="https://wa.me/554497251731?text=Olá! Gostaria de contratar o plano Business"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-auto"
@@ -558,7 +558,7 @@ export default function Home() {
                     </li>
                   </ul>
                   <a
-                    href="https://wa.me/5521999999999?text=Olá! Gostaria de saber mais sobre o plano Enterprise"
+                    href="https://wa.me/554497251731?text=Olá! Gostaria de saber mais sobre o plano Enterprise"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-auto"

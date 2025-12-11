@@ -37,7 +37,7 @@ export default function Beauty() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/5521999999999?text=Olá! Gostaria de saber mais sobre a Quick AI Beauty" 
+                  href="https://wa.me/554497251731?text=Olá! Gostaria de saber mais sobre a Quick AI Beauty" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -292,7 +292,7 @@ export default function Beauty() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://wa.me/5521999999999?text=Olá! Gostaria de agendar uma demonstração da Quick AI Beauty" 
+                  href="https://wa.me/554497251731?text=Olá! Gostaria de agendar uma demonstração da Quick AI Beauty" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >

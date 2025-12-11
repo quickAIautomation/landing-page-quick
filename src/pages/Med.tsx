@@ -37,7 +37,7 @@ export default function Med() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/5521999999999?text=Olá! Gostaria de saber mais sobre a Quick AI Med" 
+                  href="https://wa.me/554497251731?text=Olá! Gostaria de saber mais sobre a Quick AI Med" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -313,7 +313,7 @@ export default function Med() {
                       O treinamento da IA é feito pela Quick a partir de questionário personalizado sobre sua clínica
                     </p>
                     <a 
-                      href="https://wa.me/5521999999999?text=Olá! Gostaria de solicitar uma proposta da Quick AI Med" 
+                      href="https://wa.me/554497251731?text=Olá! Gostaria de solicitar uma proposta da Quick AI Med" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="block"
@@ -343,7 +343,7 @@ export default function Med() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://wa.me/5521999999999?text=Olá! Gostaria de agendar uma demonstração da Quick AI Med" 
+                  href="https://wa.me/554497251731?text=Olá! Gostaria de agendar uma demonstração da Quick AI Med" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >

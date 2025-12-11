@@ -106,7 +106,7 @@ export default function PostPurchaseForm() {
         (formData.mensagem ? `\n*Mensagem Adicional:*\n${formData.mensagem}` : "");
 
       // Remove caracteres especiais do WhatsApp para URL
-      const whatsappNumber = "5521999999999"; // Substitua pelo número real
+      const whatsappNumber = "554497251731";
       const encodedMessage = encodeURIComponent(mensagemWhatsApp);
       
       // Abre WhatsApp Web/App com a mensagem pré-formatada
