@@ -43,11 +43,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="mailto:contato@quickai.com.br" 
+                  href="mailto:quickAI.automation@gmail.com" 
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
                 >
-                  <Mail className="w-4 h-4" />
-                  contato@quickai.com.br
+                  <Mail className="w-5 h-5 flex-shrink-0" />
+                  quickAI.automation@gmail.com
                 </a>
               </li>
               <li>
@@ -64,9 +64,11 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
-        <div className="mt-12 pt-8 border-t border-border/50 text-center">
-          <p className="text-muted-foreground text-sm">
+      </div>
+      
+      <div className="border-t border-border/50 w-full">
+        <div className="container py-8">
+          <p className="text-muted-foreground text-sm text-center">
             © {new Date().getFullYear()} Quick AI. Todos os direitos reservados.
           </p>
         </div>

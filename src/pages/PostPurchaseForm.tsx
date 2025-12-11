@@ -91,6 +91,13 @@ export default function PostPurchaseForm() {
     setIsSubmitting(true);
 
     try {
+      // ============================================
+      // ONDE OS DADOS SÃO ENVIADOS:
+      // ============================================
+      // ATUALMENTE: Os dados são enviados APENAS via WhatsApp
+      // Os dados NÃO são armazenados em banco de dados ou API
+      // ============================================
+
       // Formata a mensagem para enviar via WhatsApp
       const mensagemWhatsApp = `🎉 *Nova Compra - Formulário de Cadastro*\n\n` +
         `*Dados do Cliente:*\n` +
@@ -105,14 +112,39 @@ export default function PostPurchaseForm() {
         `💻 Sistema Atual: ${formData.sistemaAtual || "Não informado"}\n` +
         (formData.mensagem ? `\n*Mensagem Adicional:*\n${formData.mensagem}` : "");
 
-      // Remove caracteres especiais do WhatsApp para URL
+      // Número do WhatsApp para receber os dados
       const whatsappNumber = "554497251731";
       const encodedMessage = encodeURIComponent(mensagemWhatsApp);
       
+      // ============================================
+      // OPÇÃO 1: Enviar para API/Backend (DESCOMENTE PARA USAR)
+      // ============================================
+      // Descomente o código abaixo se quiser enviar os dados para uma API
+      // e armazenar em banco de dados antes de abrir o WhatsApp
+      /*
+      const API_URL = import.meta.env.VITE_API_URL || "https://sua-api.com/api/cadastro";
+      
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro ao enviar dados para a API");
+      }
+
+      const result = await response.json();
+      console.log("Dados salvos com sucesso:", result);
+      */
+      // ============================================
+
       // Abre WhatsApp Web/App com a mensagem pré-formatada
       window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
 
-      // Simula envio (aqui você pode integrar com sua API)
+      // Aguarda um momento para garantir que o WhatsApp abriu
       await new Promise(resolve => setTimeout(resolve, 1000));
 
       setIsSuccess(true);
@@ -138,7 +170,7 @@ export default function PostPurchaseForm() {
 
     } catch (error) {
       toast.error("Erro ao enviar formulário. Tente novamente.");
-      console.error(error);
+      console.error("Erro ao processar formulário:", error);
     } finally {
       setIsSubmitting(false);
     }

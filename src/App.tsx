@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch, useLocation, Router as WouterRouter } from "wouter";
 import { useEffect } from "react";
-import { ErrorBoundary } from "@/components/common";
+import { ErrorBoundary, ScrollToTop } from "@/components/common";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Home, Med, Beauty, Auto, PostPurchaseForm, NotFound } from "@/pages";
 
@@ -56,6 +56,7 @@ function App() {
           <WouterRouter base={basePath}>
             <Toaster />
             <Router />
+            <ScrollToTop />
           </WouterRouter>
         </TooltipProvider>
       </ThemeProvider>

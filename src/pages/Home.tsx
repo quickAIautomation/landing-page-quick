@@ -35,11 +35,12 @@ export default function Home() {
         if (element) {
           const headerOffset = 100;
           const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
 
           window.scrollTo({
             top: offsetPosition,
-            behavior: "smooth"
+            behavior: "smooth",
           });
         }
       }, 100);
@@ -49,7 +50,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-1 pt-24 md:pt-28">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-16 md:py-24 lg:py-32">
@@ -66,12 +67,12 @@ export default function Home() {
                   Automação Inteligente de Atendimento
                 </span>
               </div>
-              
+
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
                 Transforme o atendimento ao cliente com{" "}
                 <span className="text-primary">Inteligência Artificial</span>
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
                 Atendimento automático via WhatsApp 24h/dia, personalizado,
                 integrado ao seu sistema e com linguagem natural que aumenta a
@@ -88,9 +89,9 @@ export default function Home() {
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </a>
-                <a 
-                  href="https://wa.me/554497251731" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/554497251731"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Button
@@ -163,7 +164,7 @@ export default function Home() {
                 aumenta a percepção de valor da sua empresa.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <Card className="group border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 bg-card/50 backdrop-blur-sm">
                 <CardHeader className="pb-4">
@@ -179,7 +180,7 @@ export default function Home() {
                   </CardDescription>
                 </CardHeader>
               </Card>
-              
+
               <Card className="group border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 bg-card/50 backdrop-blur-sm">
                 <CardHeader className="pb-4">
                   <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
@@ -194,7 +195,7 @@ export default function Home() {
                   </CardDescription>
                 </CardHeader>
               </Card>
-              
+
               <Card className="group border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 bg-card/50 backdrop-blur-sm">
                 <CardHeader className="pb-4">
                   <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
@@ -226,15 +227,15 @@ export default function Home() {
                 atendimento
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Quick AI Med */}
               <Card className="group border-primary/20 hover:border-primary transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 bg-card/50 backdrop-blur-sm flex flex-col">
                 <CardHeader>
                   <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                    <img 
-                      src={ICON_MED} 
-                      alt="Med" 
+                    <img
+                      src={ICON_MED}
+                      alt="Med"
                       className="w-12 h-12 object-contain"
                     />
                   </div>
@@ -277,9 +278,9 @@ export default function Home() {
               <Card className="group border-primary/20 hover:border-primary transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 bg-card/50 backdrop-blur-sm flex flex-col">
                 <CardHeader>
                   <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                    <img 
-                      src={ICON_BEAUTY} 
-                      alt="Beauty" 
+                    <img
+                      src={ICON_BEAUTY}
+                      alt="Beauty"
                       className="w-12 h-12 object-contain"
                     />
                   </div>
@@ -324,9 +325,9 @@ export default function Home() {
               <Card className="group border-primary/20 hover:border-primary transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 bg-card/50 backdrop-blur-sm flex flex-col">
                 <CardHeader>
                   <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                    <img 
-                      src={ICON_AUTO} 
-                      alt="Auto" 
+                    <img
+                      src={ICON_AUTO}
+                      alt="Auto"
                       className="w-12 h-12 object-contain"
                     />
                   </div>
@@ -369,11 +370,15 @@ export default function Home() {
         </section>
 
         {/* Planos Section */}
-        <section id="planos" className="py-20 md:py-28 bg-gradient-to-b from-background via-card/30 to-background border-t border-border/50">
+        <section
+          id="planos"
+          className="py-20 md:py-28 bg-gradient-to-b from-background via-card/30 to-background border-t border-border/50"
+        >
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Escolha o plano ideal para seu <span className="text-primary">negócio</span>
+                Escolha o plano ideal para seu{" "}
+                <span className="text-primary">negócio</span>
               </h2>
               <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
                 Soluções flexíveis que crescem com você
@@ -389,7 +394,9 @@ export default function Home() {
                   </div>
                   <CardTitle className="text-2xl mb-2">Starter</CardTitle>
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-4xl font-bold text-primary">$400</span>
+                    <span className="text-4xl font-bold text-primary">
+                      $397
+                    </span>
                     <span className="text-muted-foreground">/mês</span>
                   </div>
                   <CardDescription className="text-base">
@@ -401,19 +408,26 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">2.500 mensagens</strong> incluídas
+                        <strong className="text-foreground">
+                          2.500 mensagens
+                        </strong>{" "}
+                        incluídas
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        Suporte em <strong className="text-foreground">dias úteis</strong>
+                        Suporte em{" "}
+                        <strong className="text-foreground">dias úteis</strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        Atendimento em <strong className="text-foreground">horário comercial</strong>
+                        Atendimento em{" "}
+                        <strong className="text-foreground">
+                          horário comercial
+                        </strong>
                       </span>
                     </li>
                   </ul>
@@ -444,11 +458,14 @@ export default function Home() {
                   </div>
                   <CardTitle className="text-2xl mb-2">Business</CardTitle>
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-4xl font-bold text-primary">$890</span>
+                    <span className="text-4xl font-bold text-primary">
+                      $897
+                    </span>
                     <span className="text-muted-foreground">/mês</span>
                   </div>
                   <CardDescription className="text-base">
-                    Solução completa para empresas em crescimento de todos os segmentos
+                    Solução completa para empresas em crescimento de todos os
+                    segmentos
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-1">
@@ -456,37 +473,50 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">10.000 mensagens</strong> incluídas
+                        <strong className="text-foreground">
+                          10.000 mensagens
+                        </strong>{" "}
+                        incluídas
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Suporte prioritário 24/7</strong>
+                        <strong className="text-foreground">
+                          Suporte prioritário 24/7
+                        </strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Integrações CRM</strong>
+                        <strong className="text-foreground">
+                          Integrações CRM
+                        </strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Multi-workflows</strong>
+                        <strong className="text-foreground">
+                          Multi-workflows
+                        </strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Treinamentos personalizados</strong>
+                        <strong className="text-foreground">
+                          Treinamentos personalizados
+                        </strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Manutenção mensal</strong>
+                        <strong className="text-foreground">
+                          Manutenção mensal
+                        </strong>
                       </span>
                     </li>
                   </ul>
@@ -512,10 +542,13 @@ export default function Home() {
                   </div>
                   <CardTitle className="text-2xl mb-2">Enterprise</CardTitle>
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-4xl font-bold text-primary">Personalizado</span>
+                    <span className="text-4xl font-bold text-primary">
+                      Personalizado
+                    </span>
                   </div>
                   <CardDescription className="text-base">
-                    Solução enterprise com recursos avançados e customização total
+                    Solução enterprise com recursos avançados e customização
+                    total
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-1">
@@ -523,37 +556,51 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Mensagens ilimitadas</strong>
+                        <strong className="text-foreground">
+                          Mensagens ilimitadas
+                        </strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        Tudo que o <strong className="text-foreground">Business possui</strong>
+                        Tudo que o{" "}
+                        <strong className="text-foreground">
+                          Business possui
+                        </strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Multi-agente IA</strong>
+                        <strong className="text-foreground">
+                          Multi-agente IA
+                        </strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Automação de agendamento</strong>
+                        <strong className="text-foreground">
+                          Automação de agendamento
+                        </strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Integrações com sistemas</strong>
+                        <strong className="text-foreground">
+                          Integrações com sistemas
+                        </strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Aplicações web personalizadas</strong> integradas ao agente
+                        <strong className="text-foreground">
+                          Aplicações web personalizadas
+                        </strong>{" "}
+                        integradas ao agente
                       </span>
                     </li>
                   </ul>
@@ -590,17 +637,22 @@ export default function Home() {
                     <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                       <Sparkles className="w-7 h-7 text-primary" />
                     </div>
-                    <CardTitle className="text-xl mb-2">Setup Inicial</CardTitle>
+                    <CardTitle className="text-xl mb-2">
+                      Setup Inicial
+                    </CardTitle>
                     <CardDescription className="text-sm">
                       Personalizado para seu negócio
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Valor personalizado conforme as necessidades do seu negócio
+                      Valor personalizado conforme as necessidades do seu
+                      negócio
                     </p>
                     <div className="pt-2 border-t border-border/50">
-                      <p className="text-xs font-semibold text-primary mb-2">Inclui:</p>
+                      <p className="text-xs font-semibold text-primary mb-2">
+                        Inclui:
+                      </p>
                       <ul className="space-y-2 text-xs text-muted-foreground">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
@@ -629,14 +681,18 @@ export default function Home() {
                     <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                       <Clock className="w-7 h-7 text-primary" />
                     </div>
-                    <CardTitle className="text-xl mb-2">Prazo de Entrega</CardTitle>
+                    <CardTitle className="text-xl mb-2">
+                      Prazo de Entrega
+                    </CardTitle>
                     <CardDescription className="text-sm">
                       Implementação rápida
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="text-center py-4">
-                      <div className="text-4xl font-bold text-primary mb-2">14</div>
+                      <div className="text-4xl font-bold text-primary mb-2">
+                        14
+                      </div>
                       <p className="text-sm text-muted-foreground">
                         dias após envio do questionário (Q&A) personalizado
                       </p>
@@ -665,7 +721,10 @@ export default function Home() {
                       </p>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed pt-2">
-                      Após o primeiro mês, mensalidade varia conforme o <strong className="text-foreground">plano contratado</strong>
+                      Após o primeiro mês, mensalidade varia conforme o{" "}
+                      <strong className="text-foreground">
+                        plano contratado
+                      </strong>
                     </p>
                   </CardContent>
                 </Card>
@@ -675,7 +734,10 @@ export default function Home() {
         </section>
 
         {/* Tecnologias Section */}
-        <section id="tecnologias" className="py-20 md:py-28 bg-card/30 border-t border-border/50">
+        <section
+          id="tecnologias"
+          className="py-20 md:py-28 bg-card/30 border-t border-border/50"
+        >
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -692,7 +754,9 @@ export default function Home() {
                 <div className="w-20 h-20 bg-card rounded-xl flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
                   <TechnologyIcons.n8n />
                 </div>
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">n8n</span>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  n8n
+                </span>
               </div>
 
               {/* JavaScript */}
@@ -700,7 +764,9 @@ export default function Home() {
                 <div className="w-20 h-20 bg-card rounded-xl flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
                   <TechnologyIcons.javascript />
                 </div>
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">JavaScript</span>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  JavaScript
+                </span>
               </div>
 
               {/* PHP */}
@@ -708,7 +774,9 @@ export default function Home() {
                 <div className="w-20 h-20 bg-card rounded-xl flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
                   <TechnologyIcons.php />
                 </div>
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">PHP</span>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  PHP
+                </span>
               </div>
 
               {/* OpenAI */}
@@ -716,7 +784,9 @@ export default function Home() {
                 <div className="w-20 h-20 bg-card rounded-xl flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
                   <TechnologyIcons.openai />
                 </div>
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">OpenAI</span>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  OpenAI
+                </span>
               </div>
 
               {/* PostgreSQL */}
@@ -724,7 +794,9 @@ export default function Home() {
                 <div className="w-20 h-20 bg-card rounded-xl flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
                   <TechnologyIcons.postgresql />
                 </div>
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">PostgreSQL</span>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  PostgreSQL
+                </span>
               </div>
 
               {/* Supabase */}
@@ -732,7 +804,9 @@ export default function Home() {
                 <div className="w-20 h-20 bg-card rounded-xl flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
                   <TechnologyIcons.supabase />
                 </div>
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">Supabase</span>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Supabase
+                </span>
               </div>
 
               {/* Redis */}
@@ -740,7 +814,9 @@ export default function Home() {
                 <div className="w-20 h-20 bg-card rounded-xl flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
                   <TechnologyIcons.redis />
                 </div>
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">Redis</span>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Redis
+                </span>
               </div>
 
               {/* META API */}
@@ -748,7 +824,9 @@ export default function Home() {
                 <div className="w-20 h-20 bg-card rounded-xl flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
                   <TechnologyIcons.meta />
                 </div>
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">META API</span>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  META API
+                </span>
               </div>
 
               {/* Cloudflare */}
@@ -756,21 +834,28 @@ export default function Home() {
                 <div className="w-20 h-20 bg-card rounded-xl flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
                   <TechnologyIcons.cloudflare />
                 </div>
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">Cloudflare</span>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Cloudflare
+                </span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Depoimentos Section */}
-        <section id="depoimentos" className="py-20 md:py-28 bg-gradient-to-b from-card/30 via-background to-background border-t border-b border-border/50">
+        <section
+          id="depoimentos"
+          className="py-20 md:py-28 bg-gradient-to-b from-card/30 via-background to-background border-t border-b border-border/50"
+        >
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                O que nossos <span className="text-primary">clientes</span> dizem
+                O que nossos <span className="text-primary">clientes</span>{" "}
+                dizem
               </h2>
               <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                Depoimentos reais de empresas que transformaram seu atendimento com a Quick AI
+                Depoimentos reais de empresas que transformaram seu atendimento
+                com a Quick AI
               </p>
             </div>
 
@@ -783,7 +868,9 @@ export default function Home() {
                       <Quote className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-lg mb-1">Dr. Carlos Silva</CardTitle>
+                      <CardTitle className="text-lg mb-1">
+                        Dr. Carlos Silva
+                      </CardTitle>
                       <CardDescription className="text-sm">
                         Diretor Clínico
                       </CardDescription>
@@ -795,7 +882,10 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm leading-relaxed italic">
-                    "A Quick AI revolucionou nosso atendimento. Reduzimos faltas em 40% e nossos pacientes adoram a agilidade. O sistema é intuitivo e a equipe da Quick AI sempre está disponível para ajudar."
+                    "A Quick AI revolucionou nosso atendimento. Reduzimos faltas
+                    em 40% e nossos pacientes adoram a agilidade. O sistema é
+                    intuitivo e a equipe da Quick AI sempre está disponível para
+                    ajudar."
                   </p>
                 </CardContent>
               </Card>
@@ -808,7 +898,9 @@ export default function Home() {
                       <Quote className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-lg mb-1">Ana Paula Costa</CardTitle>
+                      <CardTitle className="text-lg mb-1">
+                        Ana Paula Costa
+                      </CardTitle>
                       <CardDescription className="text-sm">
                         Proprietária
                       </CardDescription>
@@ -820,7 +912,10 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm leading-relaxed italic">
-                    "Incrível como a automação melhorou nossa gestão de horários. Agora conseguimos atender mais clientes sem sobrecarregar a equipe. Os lembretes automáticos reduziram muito as faltas."
+                    "Incrível como a automação melhorou nossa gestão de
+                    horários. Agora conseguimos atender mais clientes sem
+                    sobrecarregar a equipe. Os lembretes automáticos reduziram
+                    muito as faltas."
                   </p>
                 </CardContent>
               </Card>
@@ -833,7 +928,9 @@ export default function Home() {
                       <Quote className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-lg mb-1">Roberto Mendes</CardTitle>
+                      <CardTitle className="text-lg mb-1">
+                        Roberto Mendes
+                      </CardTitle>
                       <CardDescription className="text-sm">
                         Gerente Geral
                       </CardDescription>
@@ -845,7 +942,10 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm leading-relaxed italic">
-                    "A avaliação de intenção de compra da Quick AI Auto é fantástica! Conseguimos qualificar melhor nossos leads e aumentar as vendas. O sistema de agendamento de revisões funciona perfeitamente."
+                    "A avaliação de intenção de compra da Quick AI Auto é
+                    fantástica! Conseguimos qualificar melhor nossos leads e
+                    aumentar as vendas. O sistema de agendamento de revisões
+                    funciona perfeitamente."
                   </p>
                 </CardContent>
               </Card>
@@ -870,7 +970,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm leading-relaxed italic">
-                    "Ajuda a responder o volume dos anúncios e aumentou os agendamentos. O agente de IA é ótimo!"
+                    "Ajuda a responder o volume dos anúncios e aumentou os
+                    agendamentos. O agente de IA é ótimo!"
                   </p>
                 </CardContent>
               </Card>
@@ -883,7 +984,9 @@ export default function Home() {
                       <Quote className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-lg mb-1">Juliana Santos</CardTitle>
+                      <CardTitle className="text-lg mb-1">
+                        Juliana Santos
+                      </CardTitle>
                       <CardDescription className="text-sm">
                         Gerente de Operações
                       </CardDescription>
@@ -895,7 +998,9 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm leading-relaxed italic">
-                    "Implementação rápida e suporte excepcional. Em uma semana já estávamos operando. A personalização do atendimento para nosso segmento foi perfeita. Recomendo sem hesitação!"
+                    "Implementação rápida e suporte excepcional. Em uma semana
+                    já estávamos operando. A personalização do atendimento para
+                    nosso segmento foi perfeita. Recomendo sem hesitação!"
                   </p>
                 </CardContent>
               </Card>
@@ -908,7 +1013,9 @@ export default function Home() {
                       <Quote className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-lg mb-1">Fernando Alves</CardTitle>
+                      <CardTitle className="text-lg mb-1">
+                        Fernando Alves
+                      </CardTitle>
                       <CardDescription className="text-sm">
                         Diretor Comercial
                       </CardDescription>
@@ -920,7 +1027,10 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm leading-relaxed italic">
-                    "O sistema de encaminhamento inteligente de leads qualificados aumentou nossa taxa de conversão em 35%. A integração com nosso CRM foi simples e eficiente. Excelente investimento!"
+                    "O sistema de encaminhamento inteligente de leads
+                    qualificados aumentou nossa taxa de conversão em 35%. A
+                    integração com nosso CRM foi simples e eficiente. Excelente
+                    investimento!"
                   </p>
                 </CardContent>
               </Card>
@@ -943,9 +1053,9 @@ export default function Home() {
                 aumentar seus agendamentos e melhorar a experiência dos seus
                 clientes.
               </p>
-              <a 
-                href="https://wa.me/554497251731" 
-                target="_blank" 
+              <a
+                href="https://wa.me/554497251731"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button
@@ -960,7 +1070,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

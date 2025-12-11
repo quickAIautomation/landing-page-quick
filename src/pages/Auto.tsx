@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header, Footer } from "@/components/layout";
@@ -5,6 +6,14 @@ import { ArrowLeft, MessageCircle, CheckCircle, Calendar, Users, TrendingUp, Fil
 import { Link } from "wouter";
 
 export default function Auto() {
+  useEffect(() => {
+    // Scroll para o topo quando a página carregar
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
