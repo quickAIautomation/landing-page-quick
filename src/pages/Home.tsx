@@ -56,12 +56,12 @@ export default function Home() {
         <section className="relative overflow-hidden py-16 md:py-24 lg:py-32">
           {/* Animated Background Elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5"></div>
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse will-change-[opacity]"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse delay-1000 will-change-[opacity]"></div>
 
           <div className="container relative z-10">
             <div className="max-w-5xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm border border-primary/20 text-primary px-5 py-2.5 rounded-full mb-8 animate-in fade-in slide-in-from-top-4 duration-700">
+              <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm border border-primary/20 text-primary px-5 py-2.5 rounded-full mb-8 animate-in fade-in slide-in-from-top-4 duration-700 will-change-[opacity,transform]">
                 <Sparkles className="w-4 h-4 animate-pulse" />
                 <span className="text-sm font-semibold tracking-wide">
                   Automação Inteligente de Atendimento
@@ -372,9 +372,10 @@ export default function Home() {
         {/* Planos Section */}
         <section
           id="planos"
-          className="py-20 md:py-28 bg-gradient-to-b from-background via-card/30 to-background border-t border-border/50"
+          className="py-20 md:py-28 bg-gradient-to-b from-background via-card/30 to-background border-t border-border/50 relative"
+          style={{ isolation: 'isolate' }}
         >
-          <div className="container">
+          <div className="container relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Escolha o plano ideal para seu{" "}
@@ -385,9 +386,9 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto relative">
               {/* Starter Plan */}
-              <Card className="group border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 bg-card/50 backdrop-blur-sm relative flex flex-col">
+              <Card className="group border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 bg-card/50 relative flex flex-col z-10">
                 <CardHeader className="pb-4">
                   <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all duration-300">
                     <Zap className="w-8 h-8 text-primary" />
@@ -446,7 +447,7 @@ export default function Home() {
               </Card>
 
               {/* Business Plan */}
-              <Card className="group border-primary/50 hover:border-primary transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 bg-card/80 backdrop-blur-sm relative border-2 flex flex-col">
+              <Card className="group border-primary/50 hover:border-primary transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 bg-card/80 relative border-2 flex flex-col z-20">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-semibold">
                     Mais Popular
@@ -535,7 +536,7 @@ export default function Home() {
               </Card>
 
               {/* Enterprise Plan */}
-              <Card className="group border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 bg-card/50 backdrop-blur-sm relative flex flex-col">
+              <Card className="group border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 bg-card/50 relative flex flex-col z-10">
                 <CardHeader className="pb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300 group-hover:scale-110">
                     <Crown className="w-8 h-8 text-primary" />
@@ -630,9 +631,9 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
                 {/* Setup Inicial */}
-                <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                <Card className="bg-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
                   <CardHeader className="pb-4">
                     <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                       <Sparkles className="w-7 h-7 text-primary" />
@@ -676,7 +677,7 @@ export default function Home() {
                 </Card>
 
                 {/* Prazo de Entrega */}
-                <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                <Card className="bg-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
                   <CardHeader className="pb-4">
                     <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                       <Clock className="w-7 h-7 text-primary" />
@@ -701,7 +702,7 @@ export default function Home() {
                 </Card>
 
                 {/* Mensalidades */}
-                <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                <Card className="bg-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
                   <CardHeader className="pb-4">
                     <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                       <TrendingUp className="w-7 h-7 text-primary" />

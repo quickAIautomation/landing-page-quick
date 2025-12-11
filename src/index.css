@@ -178,6 +178,51 @@
     }
   }
 
+  /* Performance optimizations */
+  .animate-in,
+  .fade-in,
+  .slide-in-from-top-2,
+  .slide-in-from-top-4,
+  .slide-in-from-bottom-4 {
+    will-change: opacity, transform;
+    contain: layout style paint;
+    transform: translateZ(0); /* Force GPU acceleration */
+    backface-visibility: hidden; /* Prevent flickering */
+  }
+  
+  /* Optimize cards and interactive elements */
+  [class*="backdrop-blur"] {
+    will-change: backdrop-filter;
+  }
+  
+  /* Optimize cards */
+  [class*="Card"],
+  .card {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Prevent layout shifts */
+  img {
+    content-visibility: auto;
+  }
+  
+  /* Fix for elements disappearing on scroll */
+  section {
+    isolation: isolate;
+    position: relative;
+  }
+  
+  /* Prevent cards from disappearing */
+  [class*="Card"],
+  .card,
+  [class*="card"] {
+    position: relative;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
   .animate-in {
     animation: fade-in 0.5s ease-out;
   }

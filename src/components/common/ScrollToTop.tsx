@@ -6,12 +6,20 @@ export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+    
     const toggleVisibility = () => {
-      // Mostra o botão quando o usuário rola mais de 300px
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // Mostra o botão quando o usuário rola mais de 300px
+          if (window.pageYOffset > 300) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -33,7 +41,7 @@ export default function ScrollToTop() {
     <button
       onClick={scrollToTop}
       className={cn(
-        "fixed bottom-8 right-8 z-50 rounded-full bg-primary text-primary-foreground p-3 shadow-lg hover:bg-primary/90 transition-all duration-300 hover:scale-110",
+        "fixed bottom-8 right-8 z-50 rounded-full bg-primary text-primary-foreground p-3 shadow-lg hover:bg-primary/90 transition-all duration-300 hover:scale-110 will-change-[opacity,transform]",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       )}
       aria-label="Voltar ao topo"
