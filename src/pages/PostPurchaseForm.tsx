@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Header, Footer } from "@/components/layout";
-import { CheckCircle, ArrowLeft, Loader2, MessageCircle, Building2, User, Mail, Phone, FileText } from "lucide-react";
+import { CheckCircle, ArrowLeft, Loader2, MessageCircle, Building2, User, FileText } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
 

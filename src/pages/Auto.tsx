@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header, Footer } from "@/components/layout";
 import { ArrowLeft, MessageCircle, CheckCircle, Calendar, Users, TrendingUp, FileText as FileTextIcon, Car } from "lucide-react";
 import { Link } from "wouter";

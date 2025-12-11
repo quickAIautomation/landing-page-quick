@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
 type Theme = 'dark' | 'light';
 
@@ -15,7 +15,7 @@ interface ThemeProviderProps {
   switchable?: boolean;
 }
 
-export function ThemeProvider({ children, defaultTheme = 'dark', switchable = false }: ThemeProviderProps) {
+export function ThemeProvider({ children, defaultTheme = 'dark' }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   useEffect(() => {
