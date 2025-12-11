@@ -1,11 +1,29 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import { ErrorBoundary } from "@/components/common";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Home, Med, Beauty, Auto, PostPurchaseForm, NotFound } from "@/pages";
 
 function Router() {
+  const [location, setLocation] = useLocation();
+
+  // Handle GitHub Pages 404 redirect
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const query = window.location.search;
+      if (query.startsWith("?/")) {
+        const newPath = query.slice(2).replace(/~and~/g, "&").split("&")[0];
+        if (newPath && newPath !== location) {
+          setLocation(newPath);
+          // Clean URL
+          window.history.replaceState({}, "", `${import.meta.env.BASE_URL}${newPath}`);
+        }
+      }
+    }
+  }, []);
+
   return (
     <Switch>
       <Route path={"/"} component={Home} />
