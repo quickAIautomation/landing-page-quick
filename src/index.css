@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Quick AI Brand Colors - Verde #58BF4D e Verde Escuro #21492C */
+  --primary: 113 47% 50%; /* Verde principal #58BF4D */
+  --primary-foreground: 0 0% 100%; /* Branco */
+  --sidebar-primary: 113 47% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --chart-1: 113 47% 50%;
+  --chart-2: 113 47% 42%;
+  --chart-3: 113 47% 35%;
+  --chart-4: 113 47% 28%;
+  --chart-5: 113 47% 21%;
+  --radius: 0.65rem;
+  --background: 0 0% 8%; /* Preto/Cinza muito escuro - cor do fundo da logo */
+  --foreground: 0 0% 100%; /* Branco */
+  --card: 0 0% 12%; /* Card ligeiramente mais claro que o fundo */
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 100%;
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 113 47% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 113 47% 50% / 0.3;
+  --input: 113 47% 50% / 0.2;
+  --ring: 113 47% 50%;
+  --sidebar: 0 0% 12%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-accent: 113 47% 50%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 113 47% 50% / 0.3;
+  --sidebar-ring: 113 47% 50%;
+}
+
+.dark {
+  /* Quick AI Brand Colors - Dark Mode (mesmas cores verdes) */
+  --primary: 113 47% 50%; /* Verde principal #58BF4D */
+  --primary-foreground: 0 0% 100%; /* Branco */
+  --sidebar-primary: 113 47% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --background: 0 0% 8%; /* Preto/Cinza muito escuro - cor do fundo da logo */
+  --foreground: 0 0% 100%; /* Branco */
+  --card: 0 0% 12%; /* Card ligeiramente mais claro que o fundo */
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 100%;
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 113 47% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 113 47% 50% / 0.3;
+  --input: 113 47% 50% / 0.2;
+  --ring: 113 47% 50%;
+  --chart-1: 113 47% 50%;
+  --chart-2: 113 47% 42%;
+  --chart-3: 113 47% 35%;
+  --chart-4: 113 47% 28%;
+  --chart-5: 113 47% 21%;
+  --sidebar: 0 0% 12%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-accent: 113 47% 50%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 113 47% 50% / 0.3;
+  --sidebar-ring: 113 47% 50%;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  
+  *:focus-visible {
+    outline-color: hsl(var(--ring) / 0.5);
+  }
+  
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Montserrat', sans-serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+
+  /* Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-from-top {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-from-bottom {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .slide-in-from-top-2 {
+    animation: slide-in-from-top 0.3s ease-out;
+  }
+
+  .slide-in-from-top-4 {
+    animation: slide-in-from-top 0.5s ease-out;
+  }
+
+  .slide-in-from-bottom-4 {
+    animation: slide-in-from-bottom 0.5s ease-out;
+  }
+
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Better focus styles */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
