@@ -369,7 +369,7 @@ export default function Home() {
         </section>
 
         {/* Planos Section */}
-        <section id="planos" className="py-20 md:py-28 bg-gradient-to-b from-background via-card/30 to-background">
+        <section id="planos" className="py-20 md:py-28 bg-gradient-to-b from-background via-card/30 to-background border-t border-border/50">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -571,11 +571,111 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
+
+            {/* Informações sobre Setup Inicial e Mensalidades */}
+            <div className="mt-20 max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                  Informações <span className="text-primary">Importantes</span>
+                </h3>
+                <p className="text-muted-foreground text-lg">
+                  Entenda como funciona nosso processo de implementação
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Setup Inicial */}
+                <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader className="pb-4">
+                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                      <Sparkles className="w-7 h-7 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl mb-2">Setup Inicial</CardTitle>
+                    <CardDescription className="text-sm">
+                      Personalizado para seu negócio
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Valor personalizado conforme as necessidades do seu negócio
+                    </p>
+                    <div className="pt-2 border-t border-border/50">
+                      <p className="text-xs font-semibold text-primary mb-2">Inclui:</p>
+                      <ul className="space-y-2 text-xs text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>Configuração e personalização completa</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>Treinamento da IA personalizado</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>Integração com sistemas</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>Configuração do mini CRM</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Prazo de Entrega */}
+                <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader className="pb-4">
+                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                      <Clock className="w-7 h-7 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl mb-2">Prazo de Entrega</CardTitle>
+                    <CardDescription className="text-sm">
+                      Implementação rápida
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-center py-4">
+                      <div className="text-4xl font-bold text-primary mb-2">14</div>
+                      <p className="text-sm text-muted-foreground">
+                        dias após envio do questionário (Q&A) personalizado
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Mensalidades */}
+                <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <CardHeader className="pb-4">
+                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                      <TrendingUp className="w-7 h-7 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl mb-2">Mensalidades</CardTitle>
+                    <CardDescription className="text-sm">
+                      Flexível e transparente
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="bg-primary/5 rounded-lg p-4 border border-primary/10">
+                      <p className="text-sm font-semibold text-primary mb-1">
+                        Primeiro mês gratuito
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        Para todos os planos
+                      </p>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed pt-2">
+                      Após o primeiro mês, mensalidade varia conforme o <strong className="text-foreground">plano contratado</strong>
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Tecnologias Section */}
-        <section id="tecnologias" className="py-20 md:py-28 bg-card/30">
+        <section id="tecnologias" className="py-20 md:py-28 bg-card/30 border-t border-border/50">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -663,7 +763,7 @@ export default function Home() {
         </section>
 
         {/* Depoimentos Section */}
-        <section id="depoimentos" className="py-20 md:py-28 bg-gradient-to-b from-card/30 via-background to-background">
+        <section id="depoimentos" className="py-20 md:py-28 bg-gradient-to-b from-card/30 via-background to-background border-t border-b border-border/50">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
